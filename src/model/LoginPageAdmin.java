@@ -23,7 +23,7 @@ public class LoginPageAdmin extends JFrame {
 	
 	public JButton btnLogin, btnRegister, btnForgotUsernamepassword, btnBack;
 	
-	
+	public static String username;
 
 	public LoginPageAdmin() {
 		setTitle("Login Account");
@@ -107,13 +107,15 @@ public class LoginPageAdmin extends JFrame {
 		
 		
 				// Button Login Actions
-	btnLogin.getInputMethodRequests()..addActionListener(new ActionListener() {
+	btnLogin.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
 					if (e.getSource() == btnLogin) {
-						String username = txtLoginId.getText();
+						username = txtLoginId.getText();
 						String password = passwordField.getText();
+						
+						
 						if (username.equals("bunny") && password.equals("bunnny")) {
 							StartPageAdmin startpageadmin = new StartPageAdmin();
 							startpageadmin.setVisible(true);
@@ -130,10 +132,13 @@ public class LoginPageAdmin extends JFrame {
 
 					ex.printStackTrace();
 				}
+				
 
 			}
+			
 
 		});
+	
 	
 	
 

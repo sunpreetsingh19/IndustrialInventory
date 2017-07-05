@@ -24,7 +24,7 @@ public class StartPageAdmin extends JFrame {
 	
 	public StartPageAdmin() {
 		
-		setTitle("Welcome Administrator");
+		setTitle("Welcome: "+LoginPageAdmin.username);
 		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
