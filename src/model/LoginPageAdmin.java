@@ -107,8 +107,7 @@ public class LoginPageAdmin extends JFrame {
 		
 		
 				// Button Login Actions
-	btnLogin.addActionListener(new ActionListener() {
-
+	btnLogin.getInputMethodRequests()..addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
