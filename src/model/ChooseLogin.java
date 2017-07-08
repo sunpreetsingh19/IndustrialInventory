@@ -35,12 +35,12 @@ public class ChooseLogin extends JFrame {
 		SpringLayout sl_contentPane = new SpringLayout();
 		contentPane.setLayout(sl_contentPane);
 		
-		JButton btnUser = new JButton("USER");
+		JButton btnUser = new JButton("EMPLOYEE");
 		sl_contentPane.putConstraint(SpringLayout.NORTH, btnUser, 67, SpringLayout.NORTH, contentPane);
 		sl_contentPane.putConstraint(SpringLayout.EAST, btnUser, -165, SpringLayout.EAST, contentPane);
 		contentPane.add(btnUser);
 		
-		JButton btnAdmin = new JButton("ADMIN");
+		JButton btnAdmin = new JButton("ADMINISTRATOR");
 		sl_contentPane.putConstraint(SpringLayout.NORTH, btnAdmin, 28, SpringLayout.SOUTH, btnUser);
 		sl_contentPane.putConstraint(SpringLayout.WEST, btnAdmin, -25, SpringLayout.WEST, btnUser);
 		sl_contentPane.putConstraint(SpringLayout.EAST, btnAdmin, -136, SpringLayout.EAST, contentPane);

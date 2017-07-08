@@ -116,7 +116,8 @@ public class LoginPageAdmin extends JFrame {
 						String password = passwordField.getText();
 						
 						
-						if (username.equals("bunny") && password.equals("bunnny")) {
+						if (username.equals("bunny") && password.equals("bunnny")|| username.equals("zubin")&& password.equals("zubin"))
+						{
 							StartPageAdmin startpageadmin = new StartPageAdmin();
 							startpageadmin.setVisible(true);
 							setVisible(false);

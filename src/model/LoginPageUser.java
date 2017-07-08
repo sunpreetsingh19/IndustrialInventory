@@ -20,7 +20,7 @@ public class LoginPageUser extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtLoginId;
 	private JPasswordField passwordField;
-public String username;
+public static String username;
 	public LoginPageUser() {
 		setTitle("Login Account");
 		setVisible(true);
@@ -86,7 +86,7 @@ public String username;
 		sl_contentPane.putConstraint(SpringLayout.EAST, btnForgotUsernamepassword, 0, SpringLayout.EAST, contentPane);
 		contentPane.add(btnForgotUsernamepassword);
 
-		JLabel lblUserLoginAccount = new JLabel("USER LOGIN ACCOUNT");
+		JLabel lblUserLoginAccount = new JLabel("EMPLOYEE LOGIN ACCOUNT");
 		sl_contentPane.putConstraint(SpringLayout.NORTH, lblUserLoginAccount, 10, SpringLayout.NORTH, contentPane);
 		sl_contentPane.putConstraint(SpringLayout.EAST, lblUserLoginAccount, 0, SpringLayout.EAST, btnRegister);
 		contentPane.add(lblUserLoginAccount);
@@ -133,6 +133,27 @@ public String username;
 
 						ChooseLogin chooseLogin = new ChooseLogin();
 						chooseLogin.setVisible(true);
+						dispose();
+
+					}
+				} catch (Exception ex) {
+
+					ex.printStackTrace();
+				}
+
+			}
+
+		});
+		//Register button code
+		btnRegister.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					if (e.getSource() == btnRegister) {
+
+						RegisterPageUser registeruser= new RegisterPageUser();
+						registeruser.setVisible(true);
 						dispose();
 
 					}
