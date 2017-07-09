@@ -4,3 +4,10 @@ todo
 2. Make questions unique
 3. send request to admin
 4. 
+
+Features
+1. Dashboard -> Active orders/ Inventory to reorder ||new customer order/   new purchase for inventory
+2. Products with pricing-> Adding new product/ inventory levels- containing stuff stocked/ missing stuff|| discontinued products|| Categories|| suppliers
+3. orders by customer and statuses|| categorize as need to ship, invoicing and so on	
+4. purchases
+5. Advanced-> customers, employees, suppliers. shippers

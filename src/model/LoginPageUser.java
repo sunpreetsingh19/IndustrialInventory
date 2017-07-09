@@ -106,7 +106,7 @@ public static String username;
 						username = txtLoginId.getText();
 						String password = passwordField.getText();
 						if (username.equals("bunny") && password.equals("bunnny")) {
-							StartPageUser startpageuser = new StartPageUser();
+							Dashboard startpageuser = new Dashboard();
 							startpageuser.setVisible(true);
 							dispose();
 
