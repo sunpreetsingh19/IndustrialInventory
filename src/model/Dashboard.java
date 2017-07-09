@@ -73,16 +73,15 @@ setTitle("Welcome: "+LoginPageUser.username);
 				if(e.getSource()==ActiveOrder) {
 					ActiveOrder.setForeground(Color.MAGENTA);
 
-					JLabel label1 = new JLabel("Active Orders");
-					mainWindow.add(label1);
+					ActiveOrderList OrderList=new ActiveOrderList();
+					mainWindow.add(OrderList.ActiveOrderList());
 					mainWindow.revalidate();
 
 				}
 				
 			}
 		});
-	
-	
+
 // button logout
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
