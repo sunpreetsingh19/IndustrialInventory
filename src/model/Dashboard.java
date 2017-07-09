@@ -6,11 +6,7 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JDesktopPane;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SpringLayout;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 import javafx.geometry.Insets;
@@ -19,7 +15,7 @@ import view.ActiveOrderList;
 public class Dashboard extends JFrame {
 
 	private JPanel contentPane;
-	private JDesktopPane mainWindow;
+	public JPanel mainWindow;
 
 	
 	public Dashboard() {
@@ -48,7 +44,7 @@ setTitle("Welcome: "+LoginPageUser.username);
 		optionPanel.setBackground(Color.WHITE);
 		contentPane.add(optionPanel);
 		
-		 mainWindow = new JDesktopPane();
+		 mainWindow = new JPanel();
 		sl_contentPane.putConstraint(SpringLayout.NORTH, mainWindow, 0, SpringLayout.NORTH, optionPanel);
 		sl_contentPane.putConstraint(SpringLayout.WEST, mainWindow, 11, SpringLayout.EAST, optionPanel);
 		sl_contentPane.putConstraint(SpringLayout.SOUTH, mainWindow, 0, SpringLayout.SOUTH, optionPanel);
@@ -69,7 +65,6 @@ setTitle("Welcome: "+LoginPageUser.username);
 		ActiveOrder.setOpaque(false);
 		contentPane.add(mainWindow);
 		mainWindow.setLayout(new SpringLayout());
-		
 		//button active order
 		ActiveOrder.addActionListener(new ActionListener() {
 			
@@ -77,12 +72,11 @@ setTitle("Welcome: "+LoginPageUser.username);
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource()==ActiveOrder) {
 					ActiveOrder.setForeground(Color.MAGENTA);
-				ActiveOrderList activelist= new ActiveOrderList();
-					mainWindow.add(activelist);
-					
-					activelist.setVisible(true);
-					mainWindow.setPreferredSize(getSize());
-					
+
+					JLabel label1 = new JLabel("Active Orders");
+					mainWindow.add(label1);
+					mainWindow.revalidate();
+
 				}
 				
 			}
